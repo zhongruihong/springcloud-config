@@ -4,7 +4,7 @@ spring:
     - dev
 ---
 server: 
-  port: 1004
+  port: 1007
   servlet: 
     context-path: /
 spring: 
@@ -27,16 +27,11 @@ eureka:
   instance: 
     hostname: localhost
     appname: springcloud-student 
-    instance-id: springcloud-student:1004 
+    instance-id: springcloud-student:1007 
     prefer-ip-address: true 
   client: 
     serviceUrl: 
       defaultZone: http://eureka2001.zrh.org:2001/eureka/,http://eureka2002.zrh.org:2002/eureka/,http://eureka2003.zrh.org:2003/eureka/,http://eureka2004.zrh.org:2004/eureka/ 
-      #single eureka: http://localhost:2001/eureka 
 info:
-  groupId: $project.groupId$
-  artifactId: $project.artifactId$
-  version: $project.version$
-  person in charge: zhongruihong
   tel: 15828095569
-  provider: 1004
+  provider: 1007

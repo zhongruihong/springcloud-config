@@ -5,7 +5,8 @@ spring:
 ---
 server:
   port: 2004
-  context-path: /
+  servlet :
+    context-path: /
 spring:
   profiles: dev
 eureka: 
@@ -19,7 +20,8 @@ eureka:
 ---
 server:
   port: 2004
-  context-path: /
+  servlet: 
+    context-path: /
 spring:
   profiles: test  
 eureka: 

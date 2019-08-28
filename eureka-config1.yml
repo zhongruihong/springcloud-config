@@ -4,7 +4,7 @@ spring:
     - dev
 ---
 server:
-  port: 2005
+  port: 8888
   servlet :
     context-path: /
 spring:
@@ -19,7 +19,7 @@ eureka:
        defaultZone: http://eureka2004.zrh.org:2004/eureka/,http://eureka2001.zrh.org:2001/eureka/,http://eureka2002.zrh.org:2002/eureka/,http://eureka2003.zrh.org:2003/eureka/       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到
 ---
 server:
-  port: 2005
+  port: 8888
   servlet: 
     context-path: /
 spring:

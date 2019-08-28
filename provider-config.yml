@@ -3,77 +3,82 @@ spring:
     active:
     - dev
 ---
-server:
+server: 
   port: 1004
-  context-path: /
+  servlet: 
+    context-path: /
   
 # 数据源配置
-spring:
+spring: 
   profiles: dev
-  application: 
-    name: springcloud-student
-  datasource:
+  application:
+    name: springcloud-student #then PRE_HOST in customer controller turn into http://springcloud-student 
+  datasource: 
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_springcloud
+    driver-class-name: com.mysql.cj.jdbc.Driver #驱动
+    url: jdbc:mysql://localhost:3306/db_springcloud #?serverTimezone=UTC
     username: root
     password: 123456
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-     
-eureka:
-  instance:
-    hostname: localhost  #eureka客户端主机实例名称
-    appname: springcloud-student  #客户端服务名
-    instance-id: springcloud-student:1004 #客户端实例名称
-    prefer-ip-address: true #显示IP
+  jpa: 
+    hibernate: 
+      ddl-auto: update 
+    show-sql: true 
+  thymeleaf: 
+    cache: false 
+eureka: 
+  instance: 
+    hostname: localhost
+    appname: springcloud-student 
+    instance-id: springcloud-student:1003 
+    prefer-ip-address: true 
   client: 
-    service-url: 
+    serviceUrl: 
       defaultZone: http://eureka2001.zrh.org:2001/eureka/,http://eureka2002.zrh.org:2002/eureka/,http://eureka2003.zrh.org:2003/eureka/,http://eureka2004.zrh.org:2004/eureka/ 
-   #把服务注册到eureka注册中心
-       
-info: 
-   groupId: $project.groupId$
-   artifactId: $project.artifactId$
-   version: $project.version$
-   负责人: 张三
-   联系电话: 110
+      #single eureka: http://localhost:2001/eureka 
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  person in charge: zhongruihong
+  tel: 15828095569
+  provider: 1004
 ---
-server:
+server: 
   port: 1004
-  context-path: /
+  servlet: 
+    context-path: /
   
 # 数据源配置
-spring:
+spring: 
   profiles: test
-  application: 
-    name: springcloud-student
-  datasource:
+  application:
+    name: springcloud-student #then PRE_HOST in customer controller turn into http://springcloud-student 
+  datasource: 
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_springcloud
+    driver-class-name: com.mysql.cj.jdbc.Driver #驱动
+    url: jdbc:mysql://localhost:3306/db_springcloud #?serverTimezone=UTC
     username: root
     password: 123456
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-     
-eureka:
-  instance:
-    hostname: localhost  #eureka客户端主机实例名称
-    appname: springcloud-student  #客户端服务名
-    instance-id: springcloud-student:1004 #客户端实例名称
-    prefer-ip-address: true #显示IP
+  jpa: 
+    hibernate: 
+      ddl-auto: update 
+    show-sql: true 
+  thymeleaf: 
+    cache: false 
+eureka: 
+  instance: 
+    hostname: localhost
+    appname: springcloud-student 
+    instance-id: springcloud-student:1003 
+    prefer-ip-address: true 
   client: 
-    service-url: 
-      defaultZone: http://eureka2001.zrh.org:2001/eureka/,http://eureka2002.zrh.org:2002/eureka/,http://eureka2003.zrh.org:2003/eureka/,http://eureka2004.zrh.org:2004/eureka/    #把服务注册到eureka注册中心
-       
-info: 
-   groupId: $project.groupId$
-   artifactId: $project.artifactId$
-   version: $project.version$
-   负责人: 张三
-   联系电话: 110
+    serviceUrl: 
+      defaultZone: http://eureka2001.zrh.org:2001/eureka/,http://eureka2002.zrh.org:2002/eureka/,http://eureka2003.zrh.org:2003/eureka/,http://eureka2004.zrh.org:2004/eureka/ 
+      #single eureka: http://localhost:2001/eureka 
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  person in charge: zhongruihong
+  tel: 15828095569
+  provider: 1004

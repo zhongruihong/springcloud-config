@@ -1,2 +1,2 @@
 test:
-  info: "tests:test;修改测试，分别访问Config服务端和客户端看是否有变;再次修改，@RefreshScope+bootstrap.yml暴露端口；应该暴露所有端口*!而且要cmd运行：curl -X POST http://localhost:3355/actuator/refresh；配好了bus和mq,只用curl -X POST http://localhost:3344/actuator/bus-refresh"
+  info: "tests:test分别访问Config服务端和客户端看是否有变;再次修改，@RefreshScope+bootstrap.yml暴露端口；应该暴露所有端口*!而且要cmd运行：curl -X POST http://localhost:3355/actuator/refresh；配好了bus和mq,只用curl -X POST http://localhost:3344/actuator/bus-refresh"

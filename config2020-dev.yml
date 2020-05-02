@@ -1,2 +1,2 @@
 test:
-  info: "tests:test;修改测试，分别访问Config服务端和客户端看是否有变"
+  info: "tests:test;修改测试，分别访问Config服务端和客户端看是否有变;再次修改，@RefreshScope+bootstrap.yml暴露端口"
